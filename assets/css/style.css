@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --main-color: #000;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: var(--bg-color);
+  transition: background-color 1s;
+}
+
+.menu {
+  width: 1000px;
+  background-color: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  padding: 10px 20px;
+}
+
+.menu .menu_item {
+  background: transparent;
+  border: none;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  position: relative;
+  transition: 1s;
+}
+
+.menu .menu_item::before {
+  content: "";
+  position: absolute;
+  background-color: var(--item-bg-colors);
+  top: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: -1;
+  transition: all 1s;
+  transform: scale(0);
+}
+
+.menu .menu_item.active {
+  transform: translate(0, -10px);
+}
+
+.menu .menu_item.active::before {
+  transform: scale(1.25);
+}
+
+.icon {
+  stroke: #fff;
+  fill: transparent;
+  stroke-dasharray: 63;
+  stroke-dashoffset: 0;
+}
+
+.menu .menu_item.active .icon {
+  animation: stroke 1s reverse;
+}
+
+@keyframes stroke {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: 63;
+  }
+}
+
+.menu_top_border {
+  background-color: var(--main-color);
+  width: 210px;
+  height: 100px;
+  position: absolute;
+  left: 0;
+  bottom: 51%;
+  clip-path: url(#border);
+  z-index: -1;
+  transition: transform 1s;
+  transform: translate(var(--translate-transform));
+}
+
+.svg-wrap {
+  height: 0;
+  width: 0;
+}
