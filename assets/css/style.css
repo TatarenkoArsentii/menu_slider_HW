@@ -89,7 +89,3 @@ body {
   transform: translate(var(--translate-transform));
 }
 
-.svg-wrap {
-  height: 0;
-  width: 0;
-}

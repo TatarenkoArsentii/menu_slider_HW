@@ -29,9 +29,9 @@ function moveBorder(activItem) {
   if (!activItem) {
     topBorder.style.setProperty(
       "--translate-transform",
-      `0, ${topBorder.offsetHeight / 2}px`
+      `0, ${topBorder.offsetHeight }px`
     );
-  }
+  } 
 
 
 menuItems.forEach((item, index) =>
