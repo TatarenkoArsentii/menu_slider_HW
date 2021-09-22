@@ -16,7 +16,8 @@ function itemClickFunction(item, index) {
   moveBorder(activItem);
 }
 
-function moveBorder(activItem) {
+function moveBorder(activItem) {  
+
   let move =
     activItem.getBoundingClientRect().left -
     menu.offsetLeft -
@@ -25,12 +26,13 @@ function moveBorder(activItem) {
   topBorder.style.setProperty("--translate-transform", `${move}px`);
 }
 
-if (!activItem) {
-  topBorder.style.setProperty(
-    "--translate-transform",
-    `0, ${topBorder.offsetHeight / 2}px`
-  );
-}
+  if (!activItem) {
+    topBorder.style.setProperty(
+      "--translate-transform",
+      `0, ${topBorder.offsetHeight / 2}px`
+    );
+  }
+
 
 menuItems.forEach((item, index) =>
   item.addEventListener("click", () => itemClickFunction(item, index))
