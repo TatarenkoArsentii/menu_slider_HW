@@ -10,9 +10,8 @@
   <body>
     <div class="menu">
       <!-- если при загрузке страницы нужен активный элемент по умолчанию, 
-        убираем ! в строке 15 и в js снимаем комментарий со строки 9, в строке 8 убираем "#B4F8C8" и 
-        снимаем комментарий с  bgColors[0] -->
-      <button class="menu_item !active">
+        убираем ! в строке 30-->
+      <button class="menu_item">
         <svg class="icon" viewBox="0 0 24 24">
           <path d="M3.8,6.6h16.4" fill="black" stroke="white" />
           <path d="M20.2,12.1H3.8" />
@@ -28,7 +27,7 @@
           <path d="M3.4,12.9H8l1.6,2.8h4.9l1.5-2.8h4.6" />
         </svg>
       </button>
-      <button class="menu_item">
+      <button class="menu_item !active">
         <svg class="icon" viewBox="0 0 24 24">
           <path d="M3.4,11.9l8.8,4.4l8.4-4.4" />
           <path d="M3.4,16.2l8.8,4.5l8.4-4.5" />
@@ -56,7 +55,11 @@
         </svg>
       </button>
       <div class="menu_top_border">
-        <svg viewBox="0 0 460 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg
+          viewBox="0 0 460 105"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
           <clipPath id="border" transform="scale(.462,.4)">
             <path
               d="M343 37C305 7 206 -32.6 114 49C70.8 93 20 104 0 104H460C447 104 426 104 385 76L343 37Z"
