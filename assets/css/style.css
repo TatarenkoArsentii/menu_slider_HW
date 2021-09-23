@@ -59,20 +59,20 @@ body {
 .icon {
   stroke: #fff;
   fill: transparent;
-  stroke-dasharray: 63;
+  stroke-dasharray: 65;
   stroke-dashoffset: 0;
 }
 
 .menu .menu_item.active .icon {
-  animation: stroke 1s reverse;
+  animation: stroke 1s alternate 2;
 }
 
 @keyframes stroke {
-  from {
+  0% {
     stroke-dashoffset: 0;
   }
-  to {
-    stroke-dashoffset: 63;
+  100% {
+    stroke-dashoffset: 65;
   }
 }
 

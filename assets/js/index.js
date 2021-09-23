@@ -29,7 +29,7 @@ if (!activItem) {
 }
 
 function itemClickFunction(item, index) {
-  declarationProperty.setProperty("--transition-duration", "1s");
+  declarationProperty.setProperty("--transition-duration", "2s");
   if (activItem) activItem.classList.remove("active");
   activItem = item;
   body.style.setProperty("--bg-color", `${bgColors[index]}`);
