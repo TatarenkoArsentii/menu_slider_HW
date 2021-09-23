@@ -64,7 +64,7 @@ body {
 }
 
 .menu .menu_item.active .icon {
-  animation: stroke 1s alternate 2;
+  animation: stroke 500ms alternate 2;
 }
 
 @keyframes stroke {
